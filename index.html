@@ -324,30 +324,811 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="app__container">
+        <!-- Grid -> Grid-row -> Grid-column -->
         <div class="grid">
-          <div class="grid__row">
+          <div class="grid__row app__content">
             <div class="grid__column-2">
               <nav class="category">
                 <h3 class="category__heading">
                   <i class="category__heading-icon fa-solid fa-list"></i>
                   Danh mục
                 </h3>
-                <ul class="category-list">
-                  <li class="category-list-item category-list-item-active">
-                    <a href="#" class="category-list-item-link">Trang điểm mặt</a>
+                <ul class="category__list">
+                  <li class="category__list-item category__list-item-active">
+                    <a href="#" class="category__list-item-link">Trang điểm mặt</a>
                   </li>
-                  <li class="category-list-item">
-                    <a href="#" class="category-list-item-link">Trang điểm môi</a>
+                  <li class="category__list-item">
+                    <a href="#" class="category__list-item-link">Trang điểm môi</a>
                   </li>
-                  <li class="category-list-item">
-                    <a href="#" class="category-list-item-link">Trang điểm mắt</a>
+                  <li class="category__list-item">
+                    <a href="#" class="category__list-item-link">Trang điểm mắt</a>
                   </li>
                 </ul>
               </nav>
             </div>
             <div class="grid__column-10">
-              
+              <div class="home__filter">
+                <span class="home__filter-label">Sắp xếp theo</span>
+                <button class="home__filter-btn btn">Phổ biến</button>
+                <button class="home__filter-btn btn btn--primary">Mới nhất</button>
+                <button class="home__filter-btn btn">Bán chạy</button>
+                <div class="select-input">
+                  <span class="select-input__label">Giá</span>
+                  <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                  <!-- List option prices -->
+                  <ul class="select-input__list">
+                    <li class="select-input__item">
+                      <a href="" class="select-input__link">Giá: Thấp đến cao</a>
+                      
+                    </li>
+                    <li class="select-input__list">
+                      <a href="" class="select-input__link">Giá: Cao đến thấp</a>
+                    </li>
+
+                  </ul>
+                </div>
+                <div class="home__filter-page">
+                  <span class="home__filter-page-number">
+                    <span class="home__filter-page-current">1</span>
+                    /14
+                  </span>
+                  <div class="home__filter-page-controls">
+                    <a href="" class="home__filter-page-btn home__filter-page-btn--disable">
+                      <i class="home__filter-page-icon fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="" class="home__filter-page-btn">
+                      <i class="home__filter-page-icon fa-solid fa-chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="home__product"> 
+                  <div class="grid__row">
+                      <!-- Product items -->
+                      <div class="grid__column-2-4">
+                        <div class="home__product-item">
+                          <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+                          <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+                            Eye Cream Edition Grand Blue</h4>
+                          <div class="home__product-item-price">
+                            <span class="home__product-item-price-old">1.200.000đ</span>
+                            <span class="home__product-item-price-current">999.000đ</span>
+                          </div>
+                          <div class="home__product-item-action">
+                            <span class="home__product-item-like home__product-item-like-liked">
+                              <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+                              <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+                            </span>
+                            <div class="home__product-item-rating">
+                              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                            </div>
+                            <span class="home__product-item-sold">88 đã bán</span>
+                          </div>
+                          <div class="home__product-item-origin">
+                            <span class="home__product-item-brand">Whoo</span>
+                            <span class="home__product-item-origin-name">Hàn quốc</span>
+                          </div>
+                          <div class="home__product-item-favourite">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="home__product-item-favourite-span">Yêu thích</span>
+                          </div>
+                          <div class="home__product-item-sale-off">
+                            <span class="home__product-item-sale-off-percent">43%</span>
+                            <span class="home__product-item-sale-off-label">GIẢM</span>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="grid__column-2-4">
+                    <div class="home__product-item">
+                      <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+                      <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+                        Eye Cream Edition Grand Blue</h4>
+                      <div class="home__product-item-price">
+                        <span class="home__product-item-price-old">1.200.000đ</span>
+                        <span class="home__product-item-price-current">999.000đ</span>
+                      </div>
+                      <div class="home__product-item-action">
+                        <span class="home__product-item-like home__product-item-like-liked">
+                          <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+                          <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+                        </span>
+                        <div class="home__product-item-rating">
+                          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                        </div>
+                        <span class="home__product-item-sold">88 đã bán</span>
+                      </div>
+                      <div class="home__product-item-origin">
+                        <span class="home__product-item-brand">Whoo</span>
+                        <span class="home__product-item-origin-name">Hàn quốc</span>
+                      </div>
+                      <div class="home__product-item-favourite">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="home__product-item-favourite-span">Yêu thích</span>
+                      </div>
+                      <div class="home__product-item-sale-off">
+                        <span class="home__product-item-sale-off-percent">43%</span>
+                        <span class="home__product-item-sale-off-label">GIẢM</span>
+                      </div>
+                    </div>
+              </div>
+              <div class="grid__column-2-4">
+                <div class="home__product-item">
+                  <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+                  <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+                    Eye Cream Edition Grand Blue</h4>
+                  <div class="home__product-item-price">
+                    <span class="home__product-item-price-old">1.200.000đ</span>
+                    <span class="home__product-item-price-current">999.000đ</span>
+                  </div>
+                  <div class="home__product-item-action">
+                    <span class="home__product-item-like home__product-item-like-liked">
+                      <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+                      <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+                    </span>
+                    <div class="home__product-item-rating">
+                      <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                      <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                      <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                      <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                      <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                    </div>
+                    <span class="home__product-item-sold">88 đã bán</span>
+                  </div>
+                  <div class="home__product-item-origin">
+                    <span class="home__product-item-brand">Whoo</span>
+                    <span class="home__product-item-origin-name">Hàn quốc</span>
+                  </div>
+                  <div class="home__product-item-favourite">
+                    <i class="fa-solid fa-check"></i>
+                    <span class="home__product-item-favourite-span">Yêu thích</span>
+                  </div>
+                  <div class="home__product-item-sale-off">
+                    <span class="home__product-item-sale-off-percent">43%</span>
+                    <span class="home__product-item-sale-off-label">GIẢM</span>
+                  </div>
+                </div>
+          </div>
+          <div class="grid__column-2-4">
+            <div class="home__product-item">
+              <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+              <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+                Eye Cream Edition Grand Blue</h4>
+              <div class="home__product-item-price">
+                <span class="home__product-item-price-old">1.200.000đ</span>
+                <span class="home__product-item-price-current">999.000đ</span>
+              </div>
+              <div class="home__product-item-action">
+                <span class="home__product-item-like home__product-item-like-liked">
+                  <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+                  <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+                </span>
+                <div class="home__product-item-rating">
+                  <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                  <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                  <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                  <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                  <i class="home__product-item-star-gold fa-solid fa-star"></i>
+                </div>
+                <span class="home__product-item-sold">88 đã bán</span>
+              </div>
+              <div class="home__product-item-origin">
+                <span class="home__product-item-brand">Whoo</span>
+                <span class="home__product-item-origin-name">Hàn quốc</span>
+              </div>
+              <div class="home__product-item-favourite">
+                <i class="fa-solid fa-check"></i>
+                <span class="home__product-item-favourite-span">Yêu thích</span>
+              </div>
+              <div class="home__product-item-sale-off">
+                <span class="home__product-item-sale-off-percent">43%</span>
+                <span class="home__product-item-sale-off-label">GIẢM</span>
+              </div>
+            </div>
+      </div>
+      <div class="grid__column-2-4">
+        <div class="home__product-item">
+          <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+          <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+            Eye Cream Edition Grand Blue</h4>
+          <div class="home__product-item-price">
+            <span class="home__product-item-price-old">1.200.000đ</span>
+            <span class="home__product-item-price-current">999.000đ</span>
+          </div>
+          <div class="home__product-item-action">
+            <span class="home__product-item-like home__product-item-like-liked">
+              <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+              <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+            </span>
+            <div class="home__product-item-rating">
+              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+              <i class="home__product-item-star-gold fa-solid fa-star"></i>
+            </div>
+            <span class="home__product-item-sold">88 đã bán</span>
+          </div>
+          <div class="home__product-item-origin">
+            <span class="home__product-item-brand">Whoo</span>
+            <span class="home__product-item-origin-name">Hàn quốc</span>
+          </div>
+          <div class="home__product-item-favourite">
+            <i class="fa-solid fa-check"></i>
+            <span class="home__product-item-favourite-span">Yêu thích</span>
+          </div>
+          <div class="home__product-item-sale-off">
+            <span class="home__product-item-sale-off-percent">43%</span>
+            <span class="home__product-item-sale-off-label">GIẢM</span>
+          </div>
+        </div>
+  </div>
+  <div class="grid__column-2-4">
+    <div class="home__product-item">
+      <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+      <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+        Eye Cream Edition Grand Blue</h4>
+      <div class="home__product-item-price">
+        <span class="home__product-item-price-old">1.200.000đ</span>
+        <span class="home__product-item-price-current">999.000đ</span>
+      </div>
+      <div class="home__product-item-action">
+        <span class="home__product-item-like home__product-item-like-liked">
+          <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+          <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+        </span>
+        <div class="home__product-item-rating">
+          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+          <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        </div>
+        <span class="home__product-item-sold">88 đã bán</span>
+      </div>
+      <div class="home__product-item-origin">
+        <span class="home__product-item-brand">Whoo</span>
+        <span class="home__product-item-origin-name">Hàn quốc</span>
+      </div>
+      <div class="home__product-item-favourite">
+        <i class="fa-solid fa-check"></i>
+        <span class="home__product-item-favourite-span">Yêu thích</span>
+      </div>
+      <div class="home__product-item-sale-off">
+        <span class="home__product-item-sale-off-percent">43%</span>
+        <span class="home__product-item-sale-off-label">GIẢM</span>
+      </div>
+    </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="grid__column-2-4">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
+    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
+      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">1.200.000đ</span>
+      <span class="home__product-item-price-current">999.000đ</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
