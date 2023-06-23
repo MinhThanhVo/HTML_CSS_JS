@@ -21,13 +21,16 @@
     />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/grid_lib_f8.css" />
+
   </head>
   <body>
     <div class="app">
       <!-- Block Element Modifer -->
       <div class="header">
-        <div class="grid">
-          <nav class="header__navbar">
+        <div class="grid wide">
+          <nav class="header__navbar hide-on-mobile-tablet">
             <ul class="header__navbar-list">
               <li
                 class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate"
@@ -198,6 +201,9 @@
             </ul>
           </nav>
           <div class="header-with-search">
+            <label for="mobile-search-checkbox" class="header__mobile-search">
+              <i class="fa-solid fa-magnifying-glass header__mobile-search-icon"></i>
+            </label>
             <div class="header__logo">
               <a href="/" class="header__logo-link">
                 <svg viewBox="0 0 192 65" class="header__logo-img">
@@ -207,8 +213,9 @@
               </svg>
               </a>
             </div>
+            <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
             <!-- Header wih search -->
-            <div class="header__search">
+            <div class="header__search ">
               <div class="header__search-input-wrap">
                 <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
                 <!-- Search history -->
@@ -323,12 +330,26 @@
               </div>
           </div>
         </div>
+        <ul class="header__sort-bar">
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Liên quan</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link header__sort-link-active">Mới nhất</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Bán chạy</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Giá</a>
+          </li>
+        </ul>
       </div>
       <div class="app__container">
         <!-- Grid -> Grid-row -> Grid-column -->
-        <div class="grid">
-          <div class="grid__row app__content">
-            <div class="grid__column-2">
+        <div class="grid wide">
+          <div class="row sm-gutter app__content">
+            <div class="col l-2 m-0 c-0">
               <nav class="category">
                 <h3 class="category__heading">
                   <i class="category__heading-icon fa-solid fa-list"></i>
@@ -347,8 +368,8 @@
                 </ul>
               </nav>
             </div>
-            <div class="grid__column-10">
-              <div class="home__filter">
+            <div class="col l-10 m-12 c-12">
+              <div class="home__filter hide-on-mobile-tablet">
                 <span class="home__filter-label">Sắp xếp theo</span>
                 <button class="home__filter-btn btn">Phổ biến</button>
                 <button class="home__filter-btn btn btn--primary">Mới nhất</button>
@@ -383,10 +404,54 @@
                   </div>
                 </div>
               </div>
+              <nav class="mobile__category">
+                <ul class="mobile__category-list">
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                  <li class="mobile__category-item">
+                    <a href="" class="mobile__category-link">Dụng cụ & Thiết bị tiện ích</a>
+                  </li>
+                </ul>
+              </nav>
               <div class="home__product"> 
-                  <div class="grid__row">
+
+                  <div class="row sm-gutter">
                       <!-- Product items -->
-                      <div class="grid__column-2-4">
+
+                      <div class="col l-2-4 m-4 c-6">
+                        <!-- Các loại kem -->
+                        
                         <div class="home__product-item">
                           <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
                           <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
@@ -407,7 +472,7 @@
                               <i class="home__product-item-star-gold fa-solid fa-star"></i>
                               <i class="home__product-item-star-gold fa-solid fa-star"></i>
                             </div>
-                            <span class="home__product-item-sold">88 đã bán</span>
+                            <span class="home__product-item-sold">Đã bán 5000+</span>
                           </div>
                           <div class="home__product-item-origin">
                             <span class="home__product-item-brand">Whoo</span>
@@ -423,14 +488,13 @@
                           </div>
                         </div>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <div class="home__product-item">
-                      <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-                      <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-                        Eye Cream Edition Grand Blue</h4>
+                      <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/media/catalog/producttmp/33/41/ff/f14a517e46874b161617199c763940ae.png)"></div>
+                      <h4 class="home__product-item-name">Bộ Đôi Kem Dưỡng Da Ngày Và Đêm Trắng Hồng Rạng Rỡ Pond's White Beauty (50g)</h4>
                       <div class="home__product-item-price">
-                        <span class="home__product-item-price-old">1.200.000đ</span>
-                        <span class="home__product-item-price-current">999.000đ</span>
+                        <span class="home__product-item-price-old">300.000 ₫</span>
+                        <span class="home__product-item-price-current">209.000 ₫</span>
                       </div>
                       <div class="home__product-item-action">
                         <span class="home__product-item-like home__product-item-like-liked">
@@ -444,30 +508,30 @@
                           <i class="home__product-item-star-gold fa-solid fa-star"></i>
                           <i class="home__product-item-star-gold fa-solid fa-star"></i>
                         </div>
-                        <span class="home__product-item-sold">88 đã bán</span>
+                        <span class="home__product-item-sold">Đã bán 5000+</span>
                       </div>
                       <div class="home__product-item-origin">
-                        <span class="home__product-item-brand">Whoo</span>
-                        <span class="home__product-item-origin-name">Hàn quốc</span>
+                        <span class="home__product-item-brand">Pond's</span>
+                        <span class="home__product-item-origin-name">Pháp</span>
                       </div>
                       <div class="home__product-item-favourite">
                         <i class="fa-solid fa-check"></i>
                         <span class="home__product-item-favourite-span">Yêu thích</span>
                       </div>
                       <div class="home__product-item-sale-off">
-                        <span class="home__product-item-sale-off-percent">43%</span>
+                        <span class="home__product-item-sale-off-percent">30%</span>
                         <span class="home__product-item-sale-off-label">GIẢM</span>
                       </div>
                     </div>
               </div>
-              <div class="grid__column-2-4">
+              <div class="col l-2-4 m-4 c-6">
                 <div class="home__product-item">
-                  <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-                  <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-                    Eye Cream Edition Grand Blue</h4>
+                  <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/media/catalog/producttmp/71/29/66/987dafab34891c2887b67f73b63c9da7.jpg)"></div>
+                  <h4 class="home__product-item-name">Kem dưỡng chuyên biệt chống lão hóa Hada Labo Pro Anti Aging α Lifting Cream (50g)</h4>
                   <div class="home__product-item-price">
-                    <span class="home__product-item-price-old">1.200.000đ</span>
-                    <span class="home__product-item-price-current">999.000đ</span>
+                    <span class="home__product-item-price-old">800.000 ₫
+                    </span>
+                    <span class="home__product-item-price-current">439.000 ₫</span>
                   </div>
                   <div class="home__product-item-action">
                     <span class="home__product-item-like home__product-item-like-liked">
@@ -481,30 +545,30 @@
                       <i class="home__product-item-star-gold fa-solid fa-star"></i>
                       <i class="home__product-item-star-gold fa-solid fa-star"></i>
                     </div>
-                    <span class="home__product-item-sold">88 đã bán</span>
+                    <span class="home__product-item-sold">Đã bán 5000+</span>
                   </div>
                   <div class="home__product-item-origin">
-                    <span class="home__product-item-brand">Whoo</span>
-                    <span class="home__product-item-origin-name">Hàn quốc</span>
+                    <span class="home__product-item-brand">Dr.Jart+</span>
+                    <span class="home__product-item-origin-name">Pháp</span>
                   </div>
                   <div class="home__product-item-favourite">
                     <i class="fa-solid fa-check"></i>
                     <span class="home__product-item-favourite-span">Yêu thích</span>
                   </div>
                   <div class="home__product-item-sale-off">
-                    <span class="home__product-item-sale-off-percent">43%</span>
+                    <span class="home__product-item-sale-off-percent">45%</span>
                     <span class="home__product-item-sale-off-label">GIẢM</span>
                   </div>
                 </div>
           </div>
-          <div class="grid__column-2-4">
+          <div class="col l-2-4 m-4 c-6">
             <div class="home__product-item">
-              <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-              <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-                Eye Cream Edition Grand Blue</h4>
+              <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/73/de/96/d0b2bfad4b4ba0261368be2c30ab6e80.png)"></div>
+              <h4 class="home__product-item-name">Kem Dưỡng Giảm Mụn, Ngừa Thâm, Thông Thoáng Lỗ Chân Lông La Roche-Posay Effaclar Duo+ 40ml</h4>
               <div class="home__product-item-price">
-                <span class="home__product-item-price-old">1.200.000đ</span>
-                <span class="home__product-item-price-current">999.000đ</span>
+                <span class="home__product-item-price-old">475.000 ₫
+                </span>
+                <span class="home__product-item-price-current">449.000 ₫</span>
               </div>
               <div class="home__product-item-action">
                 <span class="home__product-item-like home__product-item-like-liked">
@@ -518,30 +582,30 @@
                   <i class="home__product-item-star-gold fa-solid fa-star"></i>
                   <i class="home__product-item-star-gold fa-solid fa-star"></i>
                 </div>
-                <span class="home__product-item-sold">88 đã bán</span>
+                <span class="home__product-item-sold">
+                  Đã bán 5000+</span>
               </div>
               <div class="home__product-item-origin">
-                <span class="home__product-item-brand">Whoo</span>
-                <span class="home__product-item-origin-name">Hàn quốc</span>
+                <span class="home__product-item-brand">La Roche-Posay</span>
+                <span class="home__product-item-origin-name">Pháp</span>
               </div>
               <div class="home__product-item-favourite">
                 <i class="fa-solid fa-check"></i>
                 <span class="home__product-item-favourite-span">Yêu thích</span>
               </div>
               <div class="home__product-item-sale-off">
-                <span class="home__product-item-sale-off-percent">43%</span>
+                <span class="home__product-item-sale-off-percent">5%</span>
                 <span class="home__product-item-sale-off-label">GIẢM</span>
               </div>
             </div>
       </div>
-      <div class="grid__column-2-4">
+      <div class="col l-2-4 m-4 c-6">
         <div class="home__product-item">
-          <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-          <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-            Eye Cream Edition Grand Blue</h4>
+          <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/02/ec/01/34eada7308601550cfc99ced4f6690e1.jpg)"></div>
+          <h4 class="home__product-item-name">Kem dưỡng ẩm Sennio Perfect Whitening Night Cream dưỡng trắng da mặt ban đêm tái tạo và phục hồi da 30g SNO 830</h4>
           <div class="home__product-item-price">
             <span class="home__product-item-price-old">1.200.000đ</span>
-            <span class="home__product-item-price-current">999.000đ</span>
+            <span class="home__product-item-price-current">698.000 ₫</span>
           </div>
           <div class="home__product-item-action">
             <span class="home__product-item-like home__product-item-like-liked">
@@ -555,30 +619,32 @@
               <i class="home__product-item-star-gold fa-solid fa-star"></i>
               <i class="home__product-item-star-gold fa-solid fa-star"></i>
             </div>
-            <span class="home__product-item-sold">88 đã bán</span>
+            <span class="home__product-item-sold">Đã bán 5000+</span>
           </div>
           <div class="home__product-item-origin">
-            <span class="home__product-item-brand">Whoo</span>
-            <span class="home__product-item-origin-name">Hàn quốc</span>
+            <span class="home__product-item-brand">Sennio</span>
+            <span class="home__product-item-origin-name">Pháp</span>
           </div>
           <div class="home__product-item-favourite">
             <i class="fa-solid fa-check"></i>
             <span class="home__product-item-favourite-span">Yêu thích</span>
           </div>
           <div class="home__product-item-sale-off">
-            <span class="home__product-item-sale-off-percent">43%</span>
+            <span class="home__product-item-sale-off-percent">51%</span>
             <span class="home__product-item-sale-off-label">GIẢM</span>
           </div>
         </div>
   </div>
-  <div class="grid__column-2-4">
+  <div class="col l-2-4 m-4 c-6">
     <div class="home__product-item">
-      <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-      <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-        Eye Cream Edition Grand Blue</h4>
+      <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/df/13/76/3f802b88bd6b137e3769d1fc8c9d7e41.png)">
+      </div>
+      <h4 class="home__product-item-name">Combo 2 Sữa rửa mặt Simple giúp da sạch thoáng 150mlx2 & Nước tẩy trang Simple 200ml</h4>
       <div class="home__product-item-price">
-        <span class="home__product-item-price-old">1.200.000đ</span>
-        <span class="home__product-item-price-current">999.000đ</span>
+        <span class="home__product-item-price-old">
+          414.000 ₫
+          </span>
+        <span class="home__product-item-price-current">220.000 ₫</span>
       </div>
       <div class="home__product-item-action">
         <span class="home__product-item-like home__product-item-like-liked">
@@ -592,30 +658,29 @@
           <i class="home__product-item-star-gold fa-solid fa-star"></i>
           <i class="home__product-item-star-gold fa-solid fa-star"></i>
         </div>
-        <span class="home__product-item-sold">88 đã bán</span>
+        <span class="home__product-item-sold">Đã bán 5000+</span>
       </div>
       <div class="home__product-item-origin">
-        <span class="home__product-item-brand">Whoo</span>
-        <span class="home__product-item-origin-name">Hàn quốc</span>
+        <span class="home__product-item-brand">SIMPLE</span>
+        <span class="home__product-item-origin-name">Việt Nam</span>
       </div>
       <div class="home__product-item-favourite">
         <i class="fa-solid fa-check"></i>
         <span class="home__product-item-favourite-span">Yêu thích</span>
       </div>
       <div class="home__product-item-sale-off">
-        <span class="home__product-item-sale-off-percent">43%</span>
+        <span class="home__product-item-sale-off-percent">47%</span>
         <span class="home__product-item-sale-off-label">GIẢM</span>
       </div>
     </div>
 </div>
-<div class="grid__column-2-4">
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/19/0d/93/e7b8465fc1dad2e6f1feff9648a8e864.png)"></div>
+    <h4 class="home__product-item-name">Kem rửa mặt dưỡng ẩm tối ưu Hada Labo Advanced Nourish Cleanser 80g – Phiên bản Mickey</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">75.000 ₫</span>
+      <span class="home__product-item-price-current">68.000 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -632,8 +697,195 @@
       <span class="home__product-item-sold">88 đã bán</span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
+      <span class="home__product-item-brand">Hada Labo</span>
+      <span class="home__product-item-origin-name">Việt Nam</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">9%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<!-- Sữa rửa mặt -->
+<div class="col l-2-4 m-4 c-6">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/fd/6e/04/0ad2eed8a335b82a5f9307e49ee4b926.png)"></div>
+    <h4 class="home__product-item-name">Bộ đôi Sữa rửa mặt tạo bọt tơ tằm trắng Sạch Sâu cho da dầu SENKA PERFECT WHIP 120g_70227</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">218.000 ₫</span>
+      <span class="home__product-item-price-current">185.000 ₫</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">
+        Đã bán 5000+</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Senka</span>
+      <span class="home__product-item-origin-name">Việt Nam</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">15%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="col l-2-4 m-4 c-6">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/96/7c/8d/0385b7fabfe38ceb547041d218764f5f.jpg)"></div>
+    <h4 class="home__product-item-name">Kem Dưỡng Giảm Mụn, Ngừa Thâm, Thông Thoáng Lỗ Chân Lông La Roche-Posay Effaclar Duo+ 40ml</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">475.000 ₫
+      </span>
+      <span class="home__product-item-price-current">449.000 ₫</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">88 đã bán</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">La Roche-Posay</span>
       <span class="home__product-item-origin-name">Hàn quốc</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">5%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="col l-2-4 m-4 c-6">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/26/54/ec/de5ccee1db25b1b85525d26f253f34d6.png)"></div>
+    <h4 class="home__product-item-name">Combo Senka Làm Sạch Chống Nắng (Sữa Rửa Mặt Whip 120g + Nước tẩy trang Fresh 230ml + UV Milk 40ml)</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">393.000 ₫
+      </span>
+      <span class="home__product-item-price-current">294.000 ₫
+      </span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">Đã bán 4709</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Senka</span>
+      <span class="home__product-item-origin-name">Việt Nam</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">25%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<!-- kem đánh răng -->
+<div class="col l-2-4 m-4 c-6">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/66/90/30/9ac0efd1c84d614668b94bfff4c98b05.jpg)"></div>
+    <h4 class="home__product-item-name">Bộ 3 Kem đánh răng P/S Trà Xanh 230g</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">129.000 ₫</span>
+      <span class="home__product-item-price-current">110.000 ₫</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">Đã bán 5000+</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">P/S</span>
+      <span class="home__product-item-origin-name">Việt Nam</span>
+    </div>
+    <div class="home__product-item-favourite">
+      <i class="fa-solid fa-check"></i>
+      <span class="home__product-item-favourite-span">Yêu thích</span>
+    </div>
+    <div class="home__product-item-sale-off">
+      <span class="home__product-item-sale-off-percent">15%</span>
+      <span class="home__product-item-sale-off-label">GIẢM</span>
+    </div>
+  </div>
+</div>
+<div class="col l-2-4 m-4 c-6">
+  <div class="home__product-item">
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/bd/1c/7e/2399210fe20a2c4fd10efaa38cbbccaf.jpg)"></div>
+    <h4 class="home__product-item-name">Kem đánh răng SENSODYNE Repair & Protect - Bảo vệ răng nhạy cảm</h4>
+    <div class="home__product-item-price">
+      <span class="home__product-item-price-old">120.000 ₫
+      </span>
+      <span class="home__product-item-price-current">99.000 ₫</span>
+    </div>
+    <div class="home__product-item-action">
+      <span class="home__product-item-like home__product-item-like-liked">
+        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
+        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
+      </span>
+      <div class="home__product-item-rating">
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+        <i class="home__product-item-star-gold fa-solid fa-star"></i>
+      </div>
+      <span class="home__product-item-sold">Đã bán 5000+</span>
+    </div>
+    <div class="home__product-item-origin">
+      <span class="home__product-item-brand">Sensodyne</span>
+      <span class="home__product-item-origin-name">Hoa Kỳ</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
@@ -645,14 +897,15 @@
     </div>
   </div>
 </div>
-<div class="grid__column-2-4">
+
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/5c/8e/58/7080c5ff5e417765a200f69718c72c5b.png)"></div>
+    <h4 class="home__product-item-name">Bộ 5 kem đánh răng Colgate ngừa sâu răng răng chắc khỏe 225g/tuýp tặng bàn chải đánh răng lông tơ nhập khẩu Thái Lan</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">289.000 ₫
+      </span>
+      <span class="home__product-item-price-current">209.000 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -666,30 +919,29 @@
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
       </div>
-      <span class="home__product-item-sold">88 đã bán</span>
+      <span class="home__product-item-sold">Đã bán 2763</span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
+      <span class="home__product-item-brand">Colgate</span>
+      <span class="home__product-item-origin-name">Thái Lan</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
       <span class="home__product-item-favourite-span">Yêu thích</span>
     </div>
     <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-percent">28%</span>
       <span class="home__product-item-sale-off-label">GIẢM</span>
     </div>
   </div>
 </div>
-<div class="grid__column-2-4">
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/4b/be/83/9803fa2c3a73f47d82c672804f512f1e.png)"></div>
+    <h4 class="home__product-item-name">Combo 3 Kem đánh răng Closeup thơm mát bất tận tinh thể băng tuyết 230g</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">144.000 ₫</span>
+      <span class="home__product-item-price-current">124.000 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -703,30 +955,29 @@
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
       </div>
-      <span class="home__product-item-sold">88 đã bán</span>
+      <span class="home__product-item-sold">Đã bán 1271</span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
+      <span class="home__product-item-brand">Closeup</span>
+      <span class="home__product-item-origin-name">Thái Lan</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
       <span class="home__product-item-favourite-span">Yêu thích</span>
     </div>
     <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-percent">14%</span>
       <span class="home__product-item-sale-off-label">GIẢM</span>
     </div>
   </div>
 </div>
-<div class="grid__column-2-4">
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/18/37/df/2fbf02d80330adf32f6c15f06ace4bc6.png)"></div>
+    <h4 class="home__product-item-name">[Mua 2 giảm 10%]Combo 3 Kem đánh răng Closeup Trắng Răng Tự Nhiên Dầu Quất Detox 230 g</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">159.000 ₫</span>
+      <span class="home__product-item-price-current">135.000 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -740,30 +991,30 @@
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
       </div>
-      <span class="home__product-item-sold">88 đã bán</span>
+      <span class="home__product-item-sold">Đã bán 1685</span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
+      <span class="home__product-item-brand">Closeup</span>
+      <span class="home__product-item-origin-name">Thái Lan</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
       <span class="home__product-item-favourite-span">Yêu thích</span>
     </div>
     <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-percent">15%</span>
       <span class="home__product-item-sale-off-label">GIẢM</span>
     </div>
   </div>
 </div>
-<div class="grid__column-2-4">
+<!-- NƯớc Hoa Nam -->
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/96/38/9d/9c0c07357ff24456ab24fb9284ca8978.png)"></div>
+    <h4 class="home__product-item-name">Nước hoa nam cao cấp, Charme Luxury, lưu hương lâu, hương mát lạnh pha chút nồng ấm, 20ml</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">275.000 ₫</span>
+      <span class="home__product-item-price-current">212.000 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -777,30 +1028,30 @@
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
       </div>
-      <span class="home__product-item-sold">88 đã bán</span>
+      <span class="home__product-item-sold">
+        Đã bán 20</span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
+      <span class="home__product-item-brand">Charme</span>
+      <span class="home__product-item-origin-name">Trung Quốc</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
       <span class="home__product-item-favourite-span">Yêu thích</span>
     </div>
     <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-percent">23%</span>
       <span class="home__product-item-sale-off-label">GIẢM</span>
     </div>
   </div>
 </div>
-<div class="grid__column-2-4">
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/dc/24/26/28fa34f7b4f9eca22fde1d092da63f69.jpg)"></div>
+    <h4 class="home__product-item-name">Nước Hoa Nam Versace Pour Homme - Eau De Toilette (100ml)</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">2.399.000 ₫</span>
+      <span class="home__product-item-price-current">1.399.000 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -814,30 +1065,29 @@
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
       </div>
-      <span class="home__product-item-sold">88 đã bán</span>
+      <span class="home__product-item-sold">Đã bán 146</span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
+      <span class="home__product-item-brand">Versace</span>
+      <span class="home__product-item-origin-name">Pháp</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
       <span class="home__product-item-favourite-span">Yêu thích</span>
     </div>
     <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-percent">42%</span>
       <span class="home__product-item-sale-off-label">GIẢM</span>
     </div>
   </div>
 </div>
-<div class="grid__column-2-4">
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/d5/92/db/e0080ab4d89d30899c5b569557c01735.JPG)"></div>
+    <h4 class="home__product-item-name">Nước Hoa Nam - Eau De Toilette Calvin Klein Ck Free (100ml)</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">2.019.000 ₫</span>
+      <span class="home__product-item-price-current">1.011.000 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -851,30 +1101,29 @@
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
       </div>
-      <span class="home__product-item-sold">88 đã bán</span>
+      <span class="home__product-item-sold">Đã bán 47</span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
+      <span class="home__product-item-brand">Calvin Klein</span>
+      <span class="home__product-item-origin-name">Hoa Kỳ</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
       <span class="home__product-item-favourite-span">Yêu thích</span>
     </div>
     <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-percent">50%</span>
       <span class="home__product-item-sale-off-label">GIẢM</span>
     </div>
   </div>
 </div>
-<div class="grid__column-2-4">
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/03/f0/9b/e24d7276c2519db29a210cd0ba3722dc.png)"></div>
+    <h4 class="home__product-item-name">Nước hoa nam chính hãng mùi hương GỖ SỒI trầm ấm quyến rũ Bergami Savage 50ml</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">580.000 ₫</span>
+      <span class="home__product-item-price-current">469.000 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -888,30 +1137,30 @@
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
       </div>
-      <span class="home__product-item-sold">88 đã bán</span>
+      <span class="home__product-item-sold">Đã bán 27
+      </span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
+      <span class="home__product-item-brand">Bergami</span>
+      <span class="home__product-item-origin-name">Đức</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
       <span class="home__product-item-favourite-span">Yêu thích</span>
     </div>
     <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-percent">19%</span>
       <span class="home__product-item-sale-off-label">GIẢM</span>
     </div>
   </div>
 </div>
-<div class="grid__column-2-4">
+<div class="col l-2-4 m-4 c-6">
   <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
+    <div class="home__product-item-img" style="background-image: url(https://salt.tikicdn.com/cache/w1200/ts/product/41/3d/92/59f8e5d7133852cadd57623de30fa256.png)"></div>
+    <h4 class="home__product-item-name">Nước hoa nam ZYA Bleu mùi hương gỗ thanh | EBMart</h4>
     <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
+      <span class="home__product-item-price-old">850.000 ₫</span>
+      <span class="home__product-item-price-current">807.500 ₫</span>
     </div>
     <div class="home__product-item-action">
       <span class="home__product-item-like home__product-item-like-liked">
@@ -925,203 +1174,19 @@
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
         <i class="home__product-item-star-gold fa-solid fa-star"></i>
       </div>
-      <span class="home__product-item-sold">88 đã bán</span>
+      <span class="home__product-item-sold">
+        Đã bán 4</span>
     </div>
     <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
+      <span class="home__product-item-brand">ZYA</span>
+      <span class="home__product-item-origin-name">Pháp</span>
     </div>
     <div class="home__product-item-favourite">
       <i class="fa-solid fa-check"></i>
       <span class="home__product-item-favourite-span">Yêu thích</span>
     </div>
     <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
-      <span class="home__product-item-sale-off-label">GIẢM</span>
-    </div>
-  </div>
-</div>
-<div class="grid__column-2-4">
-  <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
-    <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
-    </div>
-    <div class="home__product-item-action">
-      <span class="home__product-item-like home__product-item-like-liked">
-        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
-        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
-      </span>
-      <div class="home__product-item-rating">
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-      </div>
-      <span class="home__product-item-sold">88 đã bán</span>
-    </div>
-    <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
-    </div>
-    <div class="home__product-item-favourite">
-      <i class="fa-solid fa-check"></i>
-      <span class="home__product-item-favourite-span">Yêu thích</span>
-    </div>
-    <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
-      <span class="home__product-item-sale-off-label">GIẢM</span>
-    </div>
-  </div>
-</div>
-<div class="grid__column-2-4">
-  <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
-    <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
-    </div>
-    <div class="home__product-item-action">
-      <span class="home__product-item-like home__product-item-like-liked">
-        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
-        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
-      </span>
-      <div class="home__product-item-rating">
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-      </div>
-      <span class="home__product-item-sold">88 đã bán</span>
-    </div>
-    <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
-    </div>
-    <div class="home__product-item-favourite">
-      <i class="fa-solid fa-check"></i>
-      <span class="home__product-item-favourite-span">Yêu thích</span>
-    </div>
-    <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
-      <span class="home__product-item-sale-off-label">GIẢM</span>
-    </div>
-  </div>
-</div>
-<div class="grid__column-2-4">
-  <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
-    <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
-    </div>
-    <div class="home__product-item-action">
-      <span class="home__product-item-like home__product-item-like-liked">
-        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
-        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
-      </span>
-      <div class="home__product-item-rating">
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-      </div>
-      <span class="home__product-item-sold">88 đã bán</span>
-    </div>
-    <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
-    </div>
-    <div class="home__product-item-favourite">
-      <i class="fa-solid fa-check"></i>
-      <span class="home__product-item-favourite-span">Yêu thích</span>
-    </div>
-    <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
-      <span class="home__product-item-sale-off-label">GIẢM</span>
-    </div>
-  </div>
-</div>
-<div class="grid__column-2-4">
-  <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
-    <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
-    </div>
-    <div class="home__product-item-action">
-      <span class="home__product-item-like home__product-item-like-liked">
-        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
-        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
-      </span>
-      <div class="home__product-item-rating">
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-      </div>
-      <span class="home__product-item-sold">88 đã bán</span>
-    </div>
-    <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
-    </div>
-    <div class="home__product-item-favourite">
-      <i class="fa-solid fa-check"></i>
-      <span class="home__product-item-favourite-span">Yêu thích</span>
-    </div>
-    <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
-      <span class="home__product-item-sale-off-label">GIẢM</span>
-    </div>
-  </div>
-</div>
-<div class="grid__column-2-4">
-  <div class="home__product-item">
-    <div class="home__product-item-img" style="background-image: url(https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png)"></div>
-    <h4 class="home__product-item-name">Set kem mắt tái sinh Ohui The First Geniture
-      Eye Cream Edition Grand Blue</h4>
-    <div class="home__product-item-price">
-      <span class="home__product-item-price-old">1.200.000đ</span>
-      <span class="home__product-item-price-current">999.000đ</span>
-    </div>
-    <div class="home__product-item-action">
-      <span class="home__product-item-like home__product-item-like-liked">
-        <i class="home__product-item-like-icon-fill fa-solid fa-heart"></i>
-        <i class="home__product-item-like-icon-empty fa-regular fa-heart"></i>
-      </span>
-      <div class="home__product-item-rating">
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-        <i class="home__product-item-star-gold fa-solid fa-star"></i>
-      </div>
-      <span class="home__product-item-sold">88 đã bán</span>
-    </div>
-    <div class="home__product-item-origin">
-      <span class="home__product-item-brand">Whoo</span>
-      <span class="home__product-item-origin-name">Hàn quốc</span>
-    </div>
-    <div class="home__product-item-favourite">
-      <i class="fa-solid fa-check"></i>
-      <span class="home__product-item-favourite-span">Yêu thích</span>
-    </div>
-    <div class="home__product-item-sale-off">
-      <span class="home__product-item-sale-off-percent">43%</span>
+      <span class="home__product-item-sale-off-percent">5%</span>
       <span class="home__product-item-sale-off-label">GIẢM</span>
     </div>
   </div>
@@ -1166,10 +1231,10 @@
           </div>
         </div>
       </div>
-      <div class="footer">
-        <div class="grid">
-          <div class="grid__row">
-            <div class="grid__column-2-4">
+      <div class="footer footer__content">
+        <div class="grid wide">
+          <div class="row">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Chăm sóc khách hàng</h3>
               <ul class="footer__list">
                 <li class="footer__list-item">
@@ -1184,7 +1249,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Giới thiệu</h3>
               <ul class="footer__list">
                 <li class="footer__list-item">
@@ -1198,7 +1263,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Danh mục</h3>
               <ul class="footer__list">
                 <li class="footer__list-item">
@@ -1212,7 +1277,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Theo dõi chúng tôi</h3>
               <ul class="footer__list">
                 <li class="footer__list-item">
@@ -1234,7 +1299,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-8 c-12">
               <h3 class="footer__heading">Vào cửa hành trên ứng dụng</h3>
               <div class="footer__download">
                 <img src="./assets/image/qrcode.png" alt="Download app" class="footer__download-qr">
@@ -1254,7 +1319,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <div class="grid">
+        <div class="grid wide">
           <p class="footer__text">© Project cá nhân Minh Thành </p>
         </div>
       </div>
